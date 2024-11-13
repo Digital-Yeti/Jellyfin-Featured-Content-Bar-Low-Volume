@@ -250,6 +250,7 @@
 					events: {
 						'onReady': event => {
 							event.target.playVideo();
+							event.target.setVolume(5);
 							['backdrop', 'plot', 'lorem-ipsum'].forEach(cls => {
 								const element = document.querySelector(`.${cls}`);
 								if (element) element.style.width = '100%';

@@ -256,11 +256,12 @@
 					width: '100%',
 					videoId,
 					playerVars: {
-						mute: 1  // Start the video muted
+						mute: 0  // Start the video muted
 					},
 					events: {
 						'onReady': event => {
 							event.target.playVideo();
+							event.target.setVolume(5);
 						},
 						'onStateChange': event => {
 							if (event.data === YT.PlayerState.PLAYING) {
